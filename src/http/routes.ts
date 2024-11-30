@@ -4,16 +4,18 @@ import { fetchAllTasks } from "./controllers/fetch-all-tasks";
 import { moveUpTask } from "./controllers/move-task-up";
 import { moveDownTask } from "./controllers/move-task-down";
 import { deleteTask } from "./controllers/delete-task";
-import { changeTask } from "./controllers/change-task";
+import { updatedTask } from "./controllers/updated-task";
 
-export async function appRoutes(app:FastifyInstance) {
-
+export async function appRoutes(app:FastifyInstance) {  
     app.post('/tasks/create-task', createTask)  
-    app.post('/task/:id', changeTask )
-    app.get('/tasks', fetchAllTasks)
-    app.patch('/tasks/:id/up' , moveUpTask )
-    app.patch('/tasks/:id/down', moveDownTask)
-    app.delete('/tasks/delete/:id', deleteTask)
-
     
+    app.patch('/task/:id', updatedTask )
+    
+    app.get('/tasks', fetchAllTasks)
+    
+    app.patch('/tasks/:id/up' , moveUpTask )
+    
+    app.patch('/tasks/:id/down', moveDownTask)
+    
+    app.delete('/tasks/delete/:id', deleteTask)
 }
