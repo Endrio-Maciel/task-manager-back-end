@@ -1,6 +1,6 @@
 # Backend
 
-- O backend foi desenvolvido em Node.js utilizando Prisma como ORM e Express como framework web. Ele é responsável pela manipulação dos dados e fornecimento de uma API RESTful para interação com o frontend.
+- O backend foi desenvolvido em Node.js utilizando Prisma como ORM e Fastify como framework web. Ele é responsável pela manipulação dos dados e fornecimento de uma API RESTful para interação com o frontend.
 
 # Funções
 
